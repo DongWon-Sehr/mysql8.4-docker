@@ -7,8 +7,8 @@ services:
       dockerfile: Dockerfile
     container_name: mysql8.4
     ports:
-      - "${MYSQL_HOST_BINDING_PORT}:3306"
-      - "${MYSQL_X_PROTOCOL_BINDING_PORT}:33060"
+      - "${MYSQL_HOST_PORT}:3306"
+      - "${MYSQL_HOST_X_PROTOCOL_PORT}:33060"
     environment:
       MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
       MYSQL_DATABASE: "${MYSQL_DATABASE}"
